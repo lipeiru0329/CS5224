@@ -13,3 +13,4 @@ coverage
 *.txt
 keys
 webpack.json
+index.ejs
