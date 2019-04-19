@@ -40,6 +40,18 @@ body {
 	font-weight: 200;
 }
 
+.ant-carousel .slick-slide {
+	text-align: center;
+	height: 160px;
+	line-height: 160px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+	color: #fff;
+  }
+
 /* D3 Test Graph */
 .d3-test-graph {
 	width: 640px;
@@ -71,6 +83,15 @@ body {
 	opacity: 0.02;
 	
 }
+
+.ant-card-body {
+	background: white;
+}
+
+.ant-card-head {
+	background: #2e98ef;
+}
+
 .chart-wrapper {
 	width: 760px;
 	height: 400px;

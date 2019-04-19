@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { IState } from 'ts/common/types';
 import Admin from 'ts/components/Admin';
+import { withRouter } from 'react-router-dom';
 
 function mapStateToProps(state: IState) {
 	return {
@@ -8,4 +9,7 @@ function mapStateToProps(state: IState) {
 	};
 }
 
-export default connect(mapStateToProps, {})(Admin);
+export default withRouter(connect(
+	mapStateToProps,
+	{}
+)(Admin) as any);

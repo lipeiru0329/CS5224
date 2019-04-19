@@ -1,4 +1,10 @@
 export const ColorStyles = {
+	MainColor: 'rgba(0,144,206,1)',
+	MainColorAlpha: 'rgba(0,144,206,.8)',
+	MainColorShadow: 'rgba(0,144,206,.2)',
+	MainErrorColor: 'rgba(256,56,79,1)',
+	MainErrorColorAplha: 'rgba(256,56,79,.8)',
+	MainErrorColorShadow: 'rgba(256,56,79,.2)',
 	//Background Colors
 	HeaderBackground: 'rgba(32,31,33,.5)',
 	CardBackground: 'rgba(32,31,33,.5)',

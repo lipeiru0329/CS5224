@@ -18,15 +18,13 @@ export const SCard = styled(Card)`
 	display: ${(props: ICardProps) => (props.inlinetype ? 'inline-table' : '')} !important;
 	background: ${ColorStyles.CardBackground} !important;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) !important;
-	border-radius: 0px !important;
-	border: none !important;
 	& > .ant-card-head {
-		background: none !important;
+		background: #2e98ef !important;
 		border-bottom: none !important;
 		padding: 0 16px !important;
 	}
 	& > .ant-card-body {
-		padding: 0px 16px 16px 16px !important;
+		padding: 0px;
 	}
 `;
 
@@ -803,6 +801,35 @@ export interface ISInputProps {
 	right?: boolean;
 	small?: boolean;
 }
+
+
+export interface ISButtonProps {
+	width?: string;
+	disable?: boolean;
+}
+
+export const SButton = styled.button`
+	pointer-events: ${(props: ISButtonProps) => (props.disable ? 'none' : 'auto')};
+	cursor: pointer;
+	outline: none;
+	height: 30px;
+	width: ${(props: ISButtonProps) => (props.width ? props.width : '100%')};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid ${ColorStyles.MainColor};
+	border-radius: 2px;
+	color: ${ColorStyles.MainColor};
+	background-color: #fff;
+	font-size: 14px;
+	transition: all 0.2s;
+	&:hover {
+		background: ${ColorStyles.MainColor};
+		color: ${ColorStyles.TextWhite};
+		box-shadow: 0 0 4px 1px ${ColorStyles.MainColorShadow};
+	}
+`;
+
 export const SInput = styled.input`
 	outline: none;
 	font-size: ${(props: ISInputProps) => (props.small ? '9px' : '12px')};
