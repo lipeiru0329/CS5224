@@ -65,24 +65,25 @@ export default class ReportAddress extends React.Component<IProps, IState> {
 
 		console.log("push to Lambda");
 		request.post('https://6rnv1kh7nj.execute-api.ap-southeast-1.amazonaws.com/default/analysis', {
-        json: {
-			"food_name": target,
-			"user_location": la + "," + lo,
-			// "1.283318,103.860580",
-			"preference_1": "time",
-			"preference_2": "rating",
-			"preference_3": "cost"
-        }
-    }, (error, res, body) => {
-        if (error) {
-			console.log(error);
-			return;
-		}
-		console.log(body);
-		console.log(res);
-		this.props.resultUpdating(body);
-	});
-}
+			json: {
+				"food_name": target,
+				"user_location": la + "," + lo,
+				// "1.283318,103.860580",
+				"preference_1": "time",
+				"preference_2": "rating",
+				"preference_3": "cost"
+			}
+		}, (error, res, body) => {
+			if (error) {
+				console.log(error);
+				return;
+			}
+			console.log(body);
+			console.log(res);
+			this.props.resultUpdating(body);
+		});
+	}
+
 	private handleSubmitPicture = () => {
 		const {base64} = this.state;
 		let targetFood = '';
